@@ -5,7 +5,7 @@ import Main from "../pageObjects/main.js";
 // const { Given, When, Then } = createBdd();
 Given("I am at main page", async function(){
     require('dotenv').config()
-    await this.page.goto(process.env.BASE_URL)
+    await this.page.goto("https://hammerhead-app-wwgsk.ondigitalocean.app")
     await expect(this.page).toHaveTitle("My Business Panel");
 }
 )
