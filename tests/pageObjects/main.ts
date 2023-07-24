@@ -8,5 +8,5 @@ export default class Mainy {
         // await this.page.getByAltText("Production Planing Tool").click()
         await this.page.locator("#toolnavbtn").click()
         const Url = this.page.url()
-        expect(Url).toBe(process.env.BASE_URL+ "/tool/")
+        expect(Url).toBe("https://hammerhead-app-wwgsk.ondigitalocean.app" + "/tool/")
 }}
