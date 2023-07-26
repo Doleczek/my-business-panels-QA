@@ -8,4 +8,4 @@ Then("I log in", async function (){
     await this.page.locator("#id_password").last().fill(process.env.BASE_PASSWORD)
     await this.page.locator(uiElementsIdMapping["Submit"]).last().click()
     expect(this.page.locator(".navbar-brand").nth(1)).toContainText(process.env.BASE_USERNAME as string)
-})
+}) // test
