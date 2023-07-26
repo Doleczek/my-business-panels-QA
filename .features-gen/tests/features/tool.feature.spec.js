@@ -7,7 +7,7 @@ test.describe("Tool", () => {
     await Given("I am at \"tool\" page");
   });
 
-  test("Page navigation", async ({ Then }) => {
+  test("Verify if not logged in user is blocked @dev", async ({ Then }) => {
     await Then("I click \"MyProcess\" button");
     await Then("I verify that \"Login needed\" appears");
     await Then("I refresh the page");
@@ -16,11 +16,6 @@ test.describe("Tool", () => {
     await Then("I refresh the page");
     await Then("I click \"MyEntities\" button");
     await Then("I verify that \"Login needed\" appears");
-    await Then("I refresh the page");
-  });
-
-  test("I am logged in @dev", async ({ Then }) => {
-    await Then("I log in");
   });
 
 });
