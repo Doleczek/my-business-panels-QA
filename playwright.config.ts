@@ -5,14 +5,14 @@ import { defineBddConfig } from 'playwright-bdd';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+require('dotenv').config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 const testDir = defineBddConfig({
-  paths: ['tests/features/mainPage.feature'],
-  require: ['tests/steps/steps.js'],
+  paths: ['tests/features/*.feature'],
+  require: ['tests/steps/*.ts'],
 });
 export default defineConfig({
   testDir,

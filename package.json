@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-tests": "npx bddgen && npx playwright test --workers 1",
-    "run-tests-headed": "npx bddgen && npx playwright test --workers 1 --headed"
+    "run-tests": "npx bddgen && npx playwright test --workers 2",
+    "run-tests-headed": "npx bddgen && npx playwright test --workers 2 --headed",
+    "run-tests-headed-dev": "npx bddgen && npx playwright test --workers 2 --headed --grep @dev"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +14,12 @@
   "devDependencies": {
     "@cucumber/cucumber": "^9.3.0",
     "@playwright/test": "^1.36.1",
-    "playwright-bdd": "^3.3.0"
+    "playwright-bdd": "^3.3.0",
+    "prettier": "3.0.0"
   },
   "dependencies": {
     "chromium": "^3.0.3",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "prm": "^1.0.1"
   }
 }
