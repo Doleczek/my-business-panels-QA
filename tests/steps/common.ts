@@ -8,7 +8,7 @@ Given("I am at {string} page", async function(name: string){
     await this.page.goto(process.env.BASE_URL+urls[name])
 })
 Then("I click {string} button", async function(name: string){
-    await this.page.locator("#" + uiElementsIdMapping[name]).click()    // Dodałem last, bo submitbtn ma dwa ID
+    await this.page.locator("#" + uiElementsIdMapping[name]).click()
 })
 Then("I verify that URL contains {string}", async function(text: string){
     const Url = this.page.url()
@@ -17,6 +17,6 @@ Then("I verify that URL contains {string}", async function(text: string){
 Then("I refresh the page", async function(){
     await this.page.reload()
 })
-Then("I verify that {string} appears", async function(text: string){
-    expect(await this.page.getByRole('heading', { name: uiElementsIdMapping[text] }))   
+Then("I verify that {string} appears", async function(text: string){ // for Login
+    expect(await this.page.getByRole('heading', { name: uiElementsIdMapping[text] }).isVisible())
 })

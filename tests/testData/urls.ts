@@ -1,5 +1,6 @@
 const urls = {
     "main":"/", 
-    "tool":"/tool/"
+    "tool":"/tool/",
+    "MyEntities":"/tool/MyEntities"
 }
 export default urls;
