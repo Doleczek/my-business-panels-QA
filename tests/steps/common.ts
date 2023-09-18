@@ -8,7 +8,7 @@ Given("I am at {string} page", async function(name: string){
     await this.page.goto(process.env.BASE_URL+urls[name])
 })
 Then("I click {string} button", async function(name: string){
-    await this.page.locator("#" + uiElementsIdMapping[name]).click()
+    await this.page.locator("#" + uiElementsIdMapping[name]).click() 
 })
 Then("I verify that URL contains {string}", async function(text: string){
     const Url = this.page.url()
@@ -19,4 +19,7 @@ Then("I refresh the page", async function(){
 })
 Then("I verify that {string} appears", async function(text: string){ // for Login
     expect(await this.page.getByRole('heading', { name: uiElementsIdMapping[text] }).isVisible())
+})
+Then("I click {string} element", async function(name: string){
+    await this.page.getByText(name).first().click()
 })
