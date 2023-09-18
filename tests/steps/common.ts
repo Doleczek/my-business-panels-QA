@@ -4,7 +4,6 @@ import uiElementsIdMapping from '../testData/mapping.js';
 import urls from '../testData/urls.js';
 import utilities from '../testData/entities/utilities.js';
 
-
 defineStep("I am at {string} page", async function(name: string){
     await this.page.goto(process.env.BASE_URL+urls[name])
 })
