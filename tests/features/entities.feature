@@ -24,7 +24,7 @@ Feature: MyEntities
         Then I refresh the page
         
 
-    Scenario: Creat utility  @dev
+    Scenario: Creat utility  
         
         Given I am at "MyEntities" page
         Then I click "Create" element
