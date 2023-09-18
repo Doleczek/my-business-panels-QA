@@ -7,7 +7,7 @@ test.describe("Tool", () => {
     await Given("I am at \"tool\" page");
   });
 
-  test("Verify if not logged in user is blocked @dev", async ({ Then }) => {
+  test("Verify if not logged in user is blocked", async ({ Then }) => {
     await Then("I click \"MyProcess\" button");
     await Then("I verify that \"Login needed\" appears");
     await Then("I refresh the page");
